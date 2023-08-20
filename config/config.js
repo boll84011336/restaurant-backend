@@ -4,7 +4,7 @@ module.exports = {
   "development": {
     "username": MYSQL_USERNAME,
     "password": MYSQL_PASSWORD,
-    "database": "database_development",
+    "database": "database_development_restaurant",
     "host": MYSQL_HOST,
     "dialect": "mysql",
     "port": MYSQL_PORT,
