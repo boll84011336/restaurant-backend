@@ -4,7 +4,8 @@ const session = require('express-session')
 const flash = require('connect-flash');
 
 const app = express()
-const port = 5001
+const port = process.env.PORT || 5002
+
 
 
 const userController = require('./controllers/user')
