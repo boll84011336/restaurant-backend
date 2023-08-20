@@ -78,7 +78,8 @@ const userController = {
 			User.create({
 				username,
 				nickname,
-				password: hash
+				password: hash,
+				role:0
 			}).then(user => {
 				req.session.username = username //新增username 之後直接是登入狀態所以把username存進session
 				req.session.userId = user.id
@@ -86,6 +87,7 @@ const userController = {
 				res.redirect('/')
 			}).catch(err => {
 				req.flash('errorMessage', err.toString())
+				console.log("ERROR",err.toString())
 				return next()
 			})
 		});
